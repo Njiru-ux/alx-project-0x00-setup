@@ -1,27 +1,18 @@
-// alx-project-0x00/pages/landing.tsx
 import React from "react";
-import Card from "@/components/Card";
-import Button from "@/components/Button";
+import { ButtonProps } from "@/interfaces";
 
-const Landing: React.FC = () => {
+const Button: React.FC<ButtonProps> = ({ title, size = 'medium', shape = 'rounded-md' }) => {
+  const sizeClasses = {
+    small: 'px-3 py-1 text-sm',
+    medium: 'px-4 py-2 text-base',
+    large: 'px-6 py-3 text-lg'
+  };
+
   return (
-    <div>
-      <h1 className="text-xl font-extralight">Landing Page</h1>
-
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card />
-        <Card />
-        <Card />
-      </div>
-
-      {/* Button variants demo */}
-      <div className="mt-8 flex flex-wrap gap-4">
-        <Button title="Small"  styles="text-sm  rounded-sm"   />
-        <Button title="Medium" styles="text-base rounded-md"  />
-        <Button title="Large"  styles="text-lg  rounded-full" />
-      </div>
-    </div>
+    <button className={`bg-blue-500 text-white font-medium ${sizeClasses[size]} ${shape}`}>
+      {title}
+    </button>
   );
 };
 
-export default Landing;
+export default Button;
