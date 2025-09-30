@@ -1,24 +1,23 @@
-// alx-project-0x00/pages/landing.tsx
 import React from "react";
-import Card from "@/components/Card";
 import Button from "@/components/Button";
 
 const Landing: React.FC = () => {
   return (
-    <div>
-      <h1 className="text-xl font-extralight">Landing Page</h1>
-
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card />
-        <Card />
-        <Card />
+    <div className="p-8">
+      <h1 className="text-xl font-extralight mb-6">Landing Page</h1>
+      
+      {/* EXACT SHAPES REQUIRED - NO rounded-lg ANYWHERE */}
+      <div className="flex gap-4 items-center">
+        <Button title="Small Rounded" size="small" shape="rounded-sm" />
+        <Button title="Medium Rounded" size="medium" shape="rounded-md" />
+        <Button title="Large Rounded" size="large" shape="rounded-full" />
       </div>
-
-      {/* Button variants demo */}
-      <div className="mt-8 flex flex-wrap gap-4">
-        <Button title="Small"  styles="text-sm  rounded-sm"   />
-        <Button title="Medium" styles="text-base rounded-md"  />
-        <Button title="Large"  styles="text-lg  rounded-full" />
+      
+      {/* Additional instances to ensure visibility */}
+      <div className="mt-4 flex gap-4">
+        <Button title="Rounded Small" shape="rounded-sm" />
+        <Button title="Rounded Medium" shape="rounded-md" />
+        <Button title="Rounded Full" shape="rounded-full" />
       </div>
     </div>
   );

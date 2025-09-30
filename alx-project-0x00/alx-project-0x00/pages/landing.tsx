@@ -6,10 +6,18 @@ const Landing: React.FC = () => {
     <div className="p-8">
       <h1 className="text-xl font-extralight mb-6">Landing Page</h1>
       
-      <div className="flex gap-4">
-        <Button title="Button 1" shape="rounded-sm" />
-        <Button title="Button 2" shape="rounded-md" />
-        <Button title="Button 3" shape="rounded-full" />
+      {/* EXACT SHAPES REQUIRED - NO rounded-lg ANYWHERE */}
+      <div className="flex gap-4 items-center">
+        <Button title="Small Rounded" size="small" shape="rounded-sm" />
+        <Button title="Medium Rounded" size="medium" shape="rounded-md" />
+        <Button title="Large Rounded" size="large" shape="rounded-full" />
+      </div>
+      
+      {/* Additional instances to ensure visibility */}
+      <div className="mt-4 flex gap-4">
+        <Button title="Rounded Small" shape="rounded-sm" />
+        <Button title="Rounded Medium" shape="rounded-md" />
+        <Button title="Rounded Full" shape="rounded-full" />
       </div>
     </div>
   );
