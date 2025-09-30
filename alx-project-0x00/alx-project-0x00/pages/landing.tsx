@@ -4,21 +4,22 @@ import Button from "@/components/Button";
 const Landing: React.FC = () => {
   return (
     <div className="p-8">
-      <h1 className="text-xl font-extralight">Landing Page</h1>
+      <h1 className="text-xl font-extralight mb-6">Landing Page</h1>
 
-      {/* Button variations with exact required shapes */}
-      <div className="mt-6 space-y-4">
-        <div className="flex gap-4">
-          <Button title="Rounded Small" shape="rounded-sm" />
-          <Button title="Rounded Medium" shape="rounded-md" />
-          <Button title="Rounded Full" shape="rounded-full" />
-        </div>
+      {/* Explicit buttons with each required shape */}
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold">Button Shapes:</h2>
         
-        {/* Additional button instances to ensure they're rendered */}
-        <div className="flex gap-4">
-          <Button title="Small Button" size="small" shape="rounded-sm" />
-          <Button title="Medium Button" size="medium" shape="rounded-md" />
-          <Button title="Large Button" size="large" shape="rounded-full" />
+        {/* Individual buttons with each shape */}
+        <Button title="Button with rounded-sm" shape="rounded-sm" />
+        <Button title="Button with rounded-md" shape="rounded-md" />
+        <Button title="Button with rounded-full" shape="rounded-full" />
+        
+        {/* Group of buttons showing all shapes together */}
+        <div className="flex gap-4 mt-4">
+          <Button title="rounded-sm" shape="rounded-sm" />
+          <Button title="rounded-md" shape="rounded-md" />
+          <Button title="rounded-full" shape="rounded-full" />
         </div>
       </div>
     </div>
